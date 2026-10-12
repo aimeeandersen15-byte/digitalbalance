@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Balance | Digital Wellbeing</title>
+    <link rel="stylesheet" href="style.css?v=7">
+    <script src="script.js?v=7" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a href="#" class="logo" id="homeLink">Digital Balance</a>
+        <span class="header-label">Your digital wellbeing journey</span>
+    </header>
+
+    <main>
+        <section id="home" class="page hero">
+            <p class="eyebrow">Welcome to Digital Balance</p>
+            <h1>Build a healthier relationship with technology.</h1>
+            <p class="hero-description">
+                Discover simple ways to manage screen time,
+                stay focused, protect your privacy, and create
+                healthier digital habits.
+            </p>
+            <button id="startButton" class="primary-button">
+                Start Learning →
+            </button>
+            <p class="small-note">10 lessons • Interactive quizzes • Free to explore</p>
+        </section>
+
+        <section id="lessons" class="page" hidden>
+            <div class="section-heading">
+                <p class="eyebrow">Your learning journey</p>
+                <h2>Explore the Lessons</h2>
+                <p>Choose a topic and test your knowledge.</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span>Your Progress</span>
+                    <span id="progressText">0 of 10 completed</span>
+                </div>
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-fill"></div>
+                </div>
+            </div>
+
+<!-- Appears only after all 10 lessons are completed -->
+<div id="resultsBanner" class="results-banner" hidden>
+    <h3>You've finished all 10 lessons</h3>
+    <p>See how you did on the quizzes.</p>
+    <button id="viewResultsButton" class="primary-button">
+        View My Results →
+    </button>
+</div>
+
+            <div id="lessonGrid" class="lesson-grid"></div>
+
+<div class="wellness-link">
+    <img class="wellness-icon" src="images/wellness-icon.png" alt="">
+    <h3>Need a Little Break?</h3>
+    <p>Relax, stretch, or practice mindfulness in your Wellness Corner.</p>
+    <button id="wellnessButton" class="primary-button">
+        Visit Your Wellness Corner →
+    </button>
+</div>
+
+</section>
+
+        
+<!-- Wellness Corner with breathing, stretching, and app suggestions -->
+<section id="wellness" class="page" hidden>
+
+    <button id="wellnessBack" class="back-button">
+        ← Back to Lessons
+    </button>
+
+    <div class="section-heading">
+        <img class="wellness-icon" src="images/wellness-icon.png" alt="">
+        <p class="eyebrow">Take a moment for yourself</p>
+        <h2>Your Wellness Corner</h2>
+        <p>Take a break, relax, and recharge.</p>
+    </div>
+
+    <img class="wellness-banner" src="images/wellness-banner.jpg"
+         alt="Illustration of a woman meditating on a yoga mat between two plants">
+
+    <!-- Interactive breathing exercise -->
+    <div class="wellness-card">
+        <h3>Breathe & Relax</h3>
+        <p>Follow the circle for a gentle breathing exercise.</p>
+
+        <div class="breathing-circle" id="breathingCircle">
+            <span id="breathingText">Ready?</span>
+        </div>
+
+        <button id="breatheButton" class="primary-button">
+            Start Breathing
+        </button>
+        <button id="stopBreatheButton" class="secondary-button">
+            Stop
+        </button>
+    </div>
+
+    <!-- Stretching and movement videos -->
+    <div class="wellness-card">
+        <h3>Move & Stretch</h3>
+        <p>Choose a video and take a short movement break.</p>
+
+        <div class="wellness-video-grid">
+            <div class="video-card">
+                <img class="video-image" src="images/desk-stretch.jpg" alt="Illustration of a person stretching beside their desk">
+                <h4>Desk Movement Stretch</h4>
+                <a href="https://www.youtube.com/watch?v=EBxV9YDEtAk"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </div>
+
+            <div class="video-card">
+                <img class="video-image" src="images/meditation.jpg" alt="Illustration of a person meditating on a cloud">
+                <h4>5-Minute Guided Meditation</h4>
+                <a href="https://www.youtube.com/watch?v=pB_qUY1dPrs"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </div>
+
+            <div class="video-card">
+                <img class="video-image" src="images/breathing.jpg" alt="Illustration of a person breathing out slowly">
+                <h4>Breathing Exercises</h4>
+                <a href="https://www.youtube.com/watch?v=OozIFgfw_Bo"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </div>
+
+            <div class="video-card">
+                <img class="video-image" src="images/desk-stretch.jpg" alt="Illustration of a person stretching beside their desk">
+                <h4>5-Minute Full-Body Stretch</h4>
+                <a href="https://www.youtube.com/watch?v=Kvoq4luIYVc"
+                   target="_blank" rel="noopener noreferrer">
+                    Watch on YouTube ↗
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wellness app recommendations -->
+    <div class="wellness-card">
+        <h3>Wellness Apps</h3>
+        <p>Explore apps that can support healthy daily habits.</p>
+
+        <div class="app-grid">
+            <div class="app-card">
+                <h4>Insight Timer</h4>
+                <p>Guided meditation and relaxation.</p>
+                <a href="https://insighttimer.com/"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore App ↗
+                </a>
+            </div>
+
+            <div class="app-card">
+                <h4>Finch</h4>
+                <p>Self-care goals and daily check-ins.</p>
+                <a href="https://finchcare.com/"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore App ↗
+                </a>
+            </div>
+
+            <div class="app-card">
+                <h4>Medito</h4>
+                <p>Free guided meditation and mindfulness.</p>
+                <a href="https://meditofoundation.org/"
+                   target="_blank" rel="noopener noreferrer">
+                    Explore App ↗
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+        <section id="lessonPage" class="page" hidden>
+            <button id="backButton" class="back-button">
+                ← All Lessons
+            </button>
+
+            <article class="lesson-panel">
+                <p id="lessonNumber" class="eyebrow"></p>
+                <h2 id="lessonTitle"></h2>
+                <img id="lessonImage" class="lesson-image" src="" alt="">
+                <p id="lessonIntro" class="lesson-intro"></p>
+
+<!-- Short explanation about why this lesson matters -->
+<div class="study-box">
+    <h3>Why Does This Matter?</h3>
+    <p id="lessonStudy"></p>
+</div>
+
+                <h3>What You Should Know</h3>
+                <ul id="lessonTips"></ul>
+
+                <div class="scenario-box">
+                    <p class="eyebrow">Real-life scenario</p>
+                    <p id="scenarioText"></p>
+                </div>
+
+                <div class="quiz-section">
+                    <p class="eyebrow">Quick quiz</p>
+                    <h3 id="quizQuestion"></h3>
+                    <div id="quizOptions" class="quiz-options"></div>
+                    <div id="quizFeedback" class="quiz-feedback"
+                         aria-live="polite" hidden></div>
+                    <button id="nextButton" class="primary-button"
+                            hidden>Continue →</button>
+                </div>
+            </article>
+        </section>
+
+        <section id="results" class="page results-page" hidden>
+            <h2>Congratulations!</h2>
+            <p>You've completed all 10 Digital Balance lessons.</p>
+            <div class="results-score">
+                <span id="finalScore">0/10</span>
+                <p>Correct answers on your first attempt</p>
+            </div>
+            <p>
+                Remember, digital wellbeing is about finding
+                a healthy balance that works for you.
+            </p>
+            <button id="reviewButton" class="primary-button">
+                Review Lessons
+            </button>
+            <button id="restartButton" class="secondary-button">
+                Start Over
+            </button>
+        </section>
+    </main>
+
+<!-- References used for the educational content -->
+
+<section class="references-section">
+    <h2>References</h2>
+
+    <p>
+        American Academy of Pediatrics. (2026).
+        <em>How to make a family media plan.</em>
+        <a href="https://www.healthychildren.org/English/family-life/Media/Pages/How-to-Make-a-Family-Media-Use-Plan.aspx" target="_blank" rel="noopener noreferrer">
+            View Source
+        </a>
+    </p>
+
+    <p>
+        American Psychological Association. (2006).
+        <em>Multitasking: Switching costs.</em>
+        <a href="https://www.apa.org/topics/research/multitasking" target="_blank" rel="noopener noreferrer">
+            View Source
+        </a>
+    </p>
+
+    <p>
+        Centers for Disease Control and Prevention. (2024).
+        <em>About sleep.</em>
+        <a href="https://www.cdc.gov/sleep/about/index.html" target="_blank" rel="noopener noreferrer">
+            View Source
+        </a>
+    </p>
+</section>
+
+
+    <footer>
+        <p>Digital Balance • Learn. Reflect. Find Your Balance.</p>
+        <p>Educational project about digital wellbeing.</p>
+    </footer>
+</body>
+</html>
